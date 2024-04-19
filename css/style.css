@@ -2,9 +2,15 @@
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    /*désactivation de toutes les margin user-agent*/
     margin: 0;
 }
 
+/* 
+    définition d'une font-size html pour utiliser les rem
+    On pourra définir une taille de texte sur les tablettes et mobile et 
+    garder les mêmes proportions
+*/
 html {
     font-size: 16px;
 }
@@ -30,6 +36,7 @@ body {
     justify-content: center;
     max-width: 1440px;
     padding: 0 50px;
+    /*centrer le body*/
     margin: auto;
 }
 
@@ -40,6 +47,7 @@ main {
     margin-bottom: 35px;
 }
 
+/*hierarchie de titre en rem*/
 h1 {
     font-size: 1.37rem;
     font-weight: bold;
@@ -106,6 +114,10 @@ header {
     max-height: 19px;
 }
 
+/* navigation contient du texte, on fixe gap et line-heigth
+    en rem comme ça la hauteur de ligne et l'espacement des 
+    liens restent toujours le double de la taille du texte*/
+
 .navigation {
     display: flex;
     gap: 2rem;
@@ -133,7 +145,7 @@ header {
 
 .recherche-lieux {
     display: flex;
-    height: 3.125rem;
+    height: 50px;
 }
 
 .icone-recherche {
@@ -142,15 +154,15 @@ header {
     align-items: center;
     border-radius: 12.5px 0 0 12.5px;
     background-color: var(--recherche-icone-bg-color);
-
-    min-width: 3.125rem;
+    min-width: 50px;
 }
 
 .icone-recherche .fa-solid {
     color: black;
 }
 
-.recherche-lieux input, button {
+.recherche-lieux input,
+button {
     font-size: 1rem;
     padding: 0 16px;
     font-weight: bold;
@@ -178,7 +190,6 @@ header {
 .filtres {
     display: flex;
     gap: 15px;
-    height: 3.125rem;
     align-items: center;
 }
 
@@ -190,7 +201,7 @@ header {
     background-color: white;
     border: solid 2px var(--recherche-icone-bg-color);
     border-radius: 1.5625rem;
-    height: 100%;
+    height: 50px;
 }
 
 .filtres button:hover {
@@ -411,6 +422,10 @@ footer {
         font-size: 16px;
     }
 
+    body {
+        padding: 0;
+    }
+
     main {
         margin-top: 30px;
 
@@ -420,12 +435,13 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center
+        align-items: center;
     }
 
     .navigation {
         display: flex;
         width: 100%;
+        gap: 0;
     }
 
     .navigation a {
@@ -434,7 +450,7 @@ footer {
         display: block;
         text-align: center;
         border-top: none;
-        border-bottom: 2px solid transparent;
+        border-bottom: 2px solid var(--main-bg-color);
     }
 
     .navigation a:hover {
@@ -443,14 +459,21 @@ footer {
         border-bottom: 2px solid var(--main-color);
     }
 
+    .recherche-lieux-et-filtres {
+        padding: 0 15px;
+    }
+
     .recherche-lieux input {
-        flex-grow: 1;
+        /*100% de la taille du conteneur - la largeur des boutons et icones + la margin négative*/
+        width: calc(100% - 100px + 12.5px);
+        /*pour décaler le bouton sur la gauche et que les bordure 
+        de l'input aillent jusqu'au bout du radius du bouton qui suit*/
         margin-right: -12.5px;
     }
 
     .recherche-lieux button {
         border-radius: 12.5px;
-        width: 3.125rem;
+        width: 50px;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
 
@@ -465,7 +488,6 @@ footer {
     .filtres {
         display: flex;
         flex-wrap: wrap;
-        height: 100%;
         gap: 10px;
     }
 
@@ -474,9 +496,8 @@ footer {
     }
 
     .filtres button {
-
+        font-size: 14px;
         width: calc(50% - 5px);
-        height: 3.12rem;
     }
 
     .hebergements-and-populaires {
@@ -487,7 +508,6 @@ footer {
 
     .hebergements-and-populaires section {
         border-radius: unset;
-
     }
 
     .populaires {
@@ -511,7 +531,8 @@ footer {
 
     }
 
-    .hebergements-cards a, .activites-cards a {
+    .hebergements-cards a,
+    .activites-cards a {
         width: 100%;
     }
 
