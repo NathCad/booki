@@ -189,6 +189,7 @@ button {
 /****** Section filtres (desktop) ***********/
 .filtres {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     align-items: center;
 }
@@ -381,6 +382,10 @@ footer {
 @media (max-width: 1024px) {
     html {
         font-size: 14px;
+    }
+
+    .filtres h2 {
+        width: 100%;
     }
 
     .hebergements-and-populaires {
