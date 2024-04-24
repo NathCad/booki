@@ -67,7 +67,7 @@ h3 {
 }
 
 .card-subtitle {
-    font-size: 0.93rem;
+    font-size: 14px;
 }
 
 .euro {
@@ -201,6 +201,12 @@ button {
 
 .filtres button:hover {
     background-color: var(--filter-bg-color);
+}
+.filtres h2{
+    font-size: 18px;
+}
+button span {
+    font-size: 17px;
 }
 
 .infos-nombre-logements {
@@ -365,6 +371,7 @@ footer {
 }
 
 .footer-nav-links h2 {
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
@@ -380,6 +387,9 @@ footer {
 
     .filtres h2 {
         width: 100%;
+    }
+    button span{
+        font-size: 16px;
     }
 
     .hebergements-and-populaires {
