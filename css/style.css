@@ -49,22 +49,17 @@ main {
 
 /*hierarchie de titre en rem*/
 h1 {
-    font-size: 1.37rem;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
 h2 {
-    font-size: 1.21rem;
+    font-size: 22px;
 }
 
 h3 {
-    font-size: 1rem;
-}
-
-.card {
-    width: 100%;
-    height: 100%;
+    font-size: 16px;
 }
 
 .card img {
@@ -89,7 +84,6 @@ h3 {
 
 .fa-solid.fa-search {
     color: white;
-
 }
 
 .card {
@@ -118,23 +112,23 @@ header {
     en rem comme ça la hauteur de ligne et l'espacement des 
     liens restent toujours le double de la taille du texte*/
 
-.navigation {
+.navigation ul {
     display: flex;
     gap: 2rem;
     line-height: 2rem;
+    list-style: none;
+    padding: 0;
 }
 
-.navigation a {
+.navigation li {
     border-top: 2px solid transparent;
-    display: block;
     font-size: 1rem;
 }
 
-.navigation a:hover {
+.navigation li:hover {
     color: var(--main-color);
     border-top: 2px solid var(--main-color);
 }
-
 
 /****** Section recherche (desktop) ***********/
 .recherche-lieux-et-filtres {
@@ -443,26 +437,36 @@ footer {
         align-items: center;
     }
 
-    .navigation {
+    header>a {
         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigation {
         width: 100%;
+        border-bottom: 2px solid var(--main-bg-color);
         gap: 0;
     }
 
-    .navigation a {
+    .navigation li {
         width: 50%;
         height: 34px;
-        display: block;
         text-align: center;
         border-top: none;
-        border-bottom: 2px solid var(--main-bg-color);
     }
 
-    .navigation a:hover {
+    .navigation ul {
+        gap: 0;
+    }
+
+    .navigation li:hover {
         color: var(--main-color);
         border-top: none;
         border-bottom: 2px solid var(--main-color);
     }
+
+
 
     .recherche-lieux-et-filtres {
         padding: 0 15px;
@@ -532,8 +536,6 @@ footer {
         flex-direction: column;
         background-color: white;
         border-color: white;
-
-
     }
 
     .hebergements-cards a,
