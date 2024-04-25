@@ -516,15 +516,12 @@ footer {
     .filtres h2 {
         width: 100%;
     }
-    .filtres button{  
-       display: grid;
-       grid-template-columns: 2fr 2fr;
-       gap: 10px;
+    .filtres button{
+        width: calc(50% - 5px);
     }
-
+    
     .filtres button span{
         font-size: 14px;
-        
     }
 
     .hebergements-and-populaires {
