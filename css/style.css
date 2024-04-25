@@ -6,11 +6,6 @@
     margin: 0;
 }
 
-/* 
-    définition d'une font-size html pour utiliser les rem
-    On pourra définir une taille de texte sur les tablettes et mobile et 
-    garder les mêmes proportions
-*/
 html {
     font-size: 16px;
 }
@@ -47,7 +42,6 @@ main {
     margin-bottom: 35px;
 }
 
-/*hierarchie de titre en rem*/
 h1 {
     font-size: 22px;
     font-weight: bold;
@@ -157,8 +151,13 @@ header {
 
 .recherche-lieux input,
 button {
-    font-size: 1rem;
+    font-size: 17px;
+    font-weight: bold;
     padding: 0 16px;
+}
+input::placeholder{
+    font-size: 18px;
+    color: black;
     font-weight: bold;
 }
 
@@ -202,9 +201,11 @@ button {
 .filtres button:hover {
     background-color: var(--filter-bg-color);
 }
-.filtres h2{
+
+.filtres h2 {
     font-size: 18px;
 }
+
 button span {
     font-size: 17px;
 }
@@ -388,7 +389,8 @@ footer {
     .filtres h2 {
         width: 100%;
     }
-    button span{
+
+    button span {
         font-size: 16px;
     }
 
@@ -507,16 +509,19 @@ footer {
     .filtres {
         display: flex;
         flex-wrap: wrap;
+        
         gap: 10px;
     }
 
     .filtres h2 {
         width: 100%;
     }
-
-    .filtres button {
-        font-size: 14px;
+    .filtres button{
         width: calc(50% - 5px);
+    }
+    
+    .filtres button span{
+        font-size: 14px;
     }
 
     .hebergements-and-populaires {
